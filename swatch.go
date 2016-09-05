@@ -1,12 +1,12 @@
 package swatch
 
 import (
-	"time"
 	"fmt"
+	"time"
 )
 
 const (
-	Biel = "CET"
+	Biel           = "CET"
 	BeatsPerSecond = 86.4
 )
 
@@ -21,7 +21,7 @@ func Beats(t time.Time) float64 {
 
 	tBiel := tUTC.In(biel)
 
-	secondsPastMidnight := tBiel.Hour() * 3600 + tBiel.Minute() * 60 + tBiel.Second()
+	secondsPastMidnight := tBiel.Hour()*3600 + tBiel.Minute()*60 + tBiel.Second()
 
 	beats := float64(secondsPastMidnight) / BeatsPerSecond
 
