@@ -1,8 +1,8 @@
 package main
 
 import (
-	"./swatch"
 	"fmt"
+	"github.com/mcandre/go-swatch"
 )
 
 func main() {
