@@ -3,9 +3,7 @@
 # EXAMPLE
 
 ```
-$ make
-go build -o bin/swatch cli.go
-bin/swatch
+$ swatch
 @721.48
 ```
 
@@ -16,3 +14,10 @@ bin/swatch
 ## Optional
 
 * [make](https://www.gnu.org/software/make/)
+
+# INSTALL
+
+```
+$ go get github.com/mcandre/go-swatch
+$ go install github.com/mcandre/go-swatch/cmd/swatch
+`
