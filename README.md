@@ -22,3 +22,9 @@ $ go get github.com/mcandre/go-swatch/...
 ```
 
 (Yes, include the ellipsis as well, it's the magic Go syntax for downloading, building, and installing all components of a package, including any libraries and command line tools.)
+
+# COMPILE AND INSTALL LOCALLY
+
+```
+$ sh -c 'cd cmd/swatch && go install'
+```
