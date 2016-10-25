@@ -3,7 +3,10 @@ all: test
 test:
 	swatch
 
+govet:
+	go vet -v
+
 gofmt:
 	gofmt -s -w .
 
-lint: gofmt
+lint: govet gofmt

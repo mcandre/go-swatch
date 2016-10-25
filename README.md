@@ -28,3 +28,11 @@ $ go get github.com/mcandre/go-swatch/...
 ```
 $ sh -c 'cd cmd/swatch && go install'
 ```
+
+# LINT
+
+Keep the code tidy:
+
+```
+$ make lint
+```
