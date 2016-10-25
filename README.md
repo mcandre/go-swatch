@@ -13,9 +13,11 @@ $ swatch
 
 ## Optional
 
-* [make](https://www.gnu.org/software/make/)
+* [Git](https://git-scm.com)
+* [Make](https://www.gnu.org/software/make/)
+* [Bash](https://www.gnu.org/software/bash/)
 
-# INSTALL
+# INSTALL FROM REMOTE GIT REPOSITORY
 
 ```
 $ go get github.com/mcandre/go-swatch/...
@@ -23,10 +25,12 @@ $ go get github.com/mcandre/go-swatch/...
 
 (Yes, include the ellipsis as well, it's the magic Go syntax for downloading, building, and installing all components of a package, including any libraries and command line tools.)
 
-# COMPILE AND INSTALL LOCALLY
+# INSTALL FROM LOCAL GIT REPOSITORY
 
 ```
-$ sh -c 'cd cmd/swatch && go install'
+$ mkdir -p $GOPATH/src/github.com/mcandre
+$ git clone git@github.com:mcandre/go-swatch.git $GOPATH/src/github.com/mcandre/go-swatch
+$ sh -c "cd $GOPATH/src/github.com/mcandre/go-swatch/cmd/swatch && go install"
 ```
 
 # LINT
