@@ -34,6 +34,14 @@ $ git clone git@github.com:mcandre/go-swatch.git $GOPATH/src/github.com/mcandre/
 $ sh -c "cd $GOPATH/src/github.com/mcandre/go-swatch/cmd/swatch && go install"
 ```
 
+# BUILD AND ARCHIVE PORTS
+
+```
+$ make port
+...
+Archived ports in bin/swatch-0.0.1.zip
+```
+
 # LINT
 
 Keep the code tidy:
