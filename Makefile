@@ -19,7 +19,7 @@ goimport:
 lint: govet gofmt goimport
 
 port:
-	sh port.sh swatch $(VERSION) bin cmd
+	goport -a swatch -l $(VERSION)
 
 clean: clean-ports
 

@@ -21,6 +21,7 @@ https://github.com/mcandre/go-swatch/releases
 * [Make](https://www.gnu.org/software/make/)
 * [Bash](https://www.gnu.org/software/bash/)
 * [goimports](https://godoc.org/golang.org/x/tools/cmd/goimports) (e.g. `go get golang.org/x/tools/cmd/goimports`)
+* [goport](https://github.com/mcandre/goport) (e.g. `go get github.com/mcandre/goport/...`)
 
 # INSTALL FROM REMOTE GIT REPOSITORY
 
@@ -38,12 +39,10 @@ $ git clone git@github.com:mcandre/go-swatch.git $GOPATH/src/github.com/mcandre/
 $ sh -c "cd $GOPATH/src/github.com/mcandre/go-swatch/cmd/swatch && go install"
 ```
 
-# BUILD AND ARCHIVE PORTS
+# PORT
 
 ```
 $ make port
-...
-Archived ports in bin/swatch-0.0.1.zip
 ```
 
 # LINT
