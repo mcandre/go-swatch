@@ -18,8 +18,13 @@ goimport:
 
 lint: govet gofmt goimport
 
-port:
-	goport -a swatch -l $(VERSION)
+port: archive-ports
+
+archive-ports: bin
+	zipc -C bin "swatch-$(VERSION).zip" "swatch-$(VERSION)"
+
+bin:
+	gox -output="bin/swatch-$(VERSION)/{{.OS}}/{{.Arch}}/{{.Dir}}" ./cmd/...
 
 clean: clean-ports
 
