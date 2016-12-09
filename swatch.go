@@ -2,6 +2,7 @@ package swatch
 
 import (
 	"fmt"
+	"log"
 	"time"
 )
 
@@ -16,7 +17,7 @@ func Beats(t time.Time) float64 {
 	biel, err := time.LoadLocation(Biel)
 
 	if err != nil {
-		panic(err)
+		log.Panic(err)
 	}
 
 	tBiel := tUTC.In(biel)
