@@ -46,7 +46,7 @@ $ go get github.com/mcandre/go-swatch/...
 
 ```
 $ mkdir -p $GOPATH/src/github.com/mcandre
-$ git clone git@github.com:mcandre/go-swatch.git $GOPATH/src/github.com/mcandre/go-swatch
+$ git clone https://github.com/mcandre/go-swatch.git $GOPATH/src/github.com/mcandre/go-swatch
 $ sh -c "cd $GOPATH/src/github.com/mcandre/go-swatch/cmd/swatch && go install"
 ```
 
