@@ -8,7 +8,7 @@ import (
 )
 
 // Version is semver.
-var Version = "0.0.1"
+var Version = "0.0.2"
 
 // Swatch Internet Time is relative to the Biel, Switzerland timezone, at a ratio of 1000 beats per 24 hour day.
 const (
