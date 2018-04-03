@@ -2,7 +2,7 @@
 
 # EXAMPLE
 
-```
+```console
 $ swatch
 @721.48
 ```
@@ -15,29 +15,25 @@ https://github.com/mcandre/go-swatch/releases
 
 https://godoc.org/github.com/mcandre/go-swatch
 
-# DEVELOPMENT REQUIREMENTS
+# RUNTIME REQUIREMENTS
 
-* [Go](https://golang.org) 1.7+ with [$GOPATH configured](https://gist.github.com/mcandre/ef73fb77a825bd153b7836ddbd9a6ddc)
+(None)
 
-## Optional
+# BUILDTIME REQUIREMENTS
 
-* [coreutils](https://www.gnu.org/software/coreutils/coreutils.html)
-* [make](https://www.gnu.org/software/make/)
+* [Go](https://golang.org/) 1.9+
+* [Docker](https://www.docker.com/)
+* [Mage](https://magefile.org/) (e.g., `go get github.com/magefile/mage`)
 * [goimports](https://godoc.org/golang.org/x/tools/cmd/goimports) (e.g. `go get golang.org/x/tools/cmd/goimports`)
 * [golint](https://github.com/golang/lint) (e.g. `go get github.com/golang/lint/golint`)
 * [errcheck](https://github.com/kisielk/errcheck) (e.g. `go get github.com/kisielk/errcheck`)
 * [nakedret](https://github.com/alexkohler/nakedret) (e.g. `go get github.com/alexkohler/nakedret`)
-* [gox](https://github.com/mitchellh/gox) (e.g. `go get github.com/mitchellh/gox`)
+* [goxcart](https://github.com/mcandre/goxcart) (e.g., `github.com/mcandre/goxcart/...`)
 * [zipc](https://github.com/mcandre/zipc) (e.g. `go get github.com/mcandre/zipc/...`)
-* [editorconfig-cli](https://github.com/amyboyd/editorconfig-cli) (e.g. `go get github.com/amyboyd/editorconfig-cli`)
-* [flcl](https://github.com/mcandre/flcl) (e.g. `go get github.com/mcandre/flcl/...`)
-* [bashate](https://github.com/openstack-dev/bashate)
-* [shlint](https://rubygems.org/gems/shlint)
-* [shellcheck](http://hackage.haskell.org/package/ShellCheck)
 
 # INSTALL FROM REMOTE GIT REPOSITORY
 
-```
+```console
 $ go get github.com/mcandre/go-swatch/...
 ```
 
@@ -45,26 +41,30 @@ $ go get github.com/mcandre/go-swatch/...
 
 # INSTALL FROM LOCAL GIT REPOSITORY
 
-```
+```console
 $ mkdir -p $GOPATH/src/github.com/mcandre
 $ git clone https://github.com/mcandre/go-swatch.git $GOPATH/src/github.com/mcandre/go-swatch
-$ sh -c "cd $GOPATH/src/github.com/mcandre/go-swatch/cmd/swatch && go install"
+$ cd "$GOPATH/src/github.co/mcandre/go-swatch"
+$ git submodule update --init --recursive
+$ go install ./...
+```
+
+# TEST
+
+```console
+$ mage test
 ```
 
 # PORT
 
-```
-$ make port
+```console
+$ mage port
 ```
 
 # LINT
 
 Keep the code tidy:
 
+```console
+$ mage lint
 ```
-$ make lint
-```
-
-# GIT HOOKS
-
-See `hooks/`.
